@@ -1,0 +1,28 @@
+---
+import { buttonVariants } from "@/components/ui/button";
+---
+
+<section class="w-full bg-secondary py-20 border-t border-border/50">
+  <div class="container mx-auto px-4 text-center">
+    <div class="max-w-3xl mx-auto space-y-8">
+      <h2 class="text-3xl md:text-5xl font-bold text-foreground tracking-tight">
+        Pronto para criar o seu Refúgio no Campo?
+      </h2>
+      <p class="text-xl text-muted-foreground font-light px-4">
+        Explore nosso catálogo de cortes premium e descubra o toque rústico da madeira maciça, a suavidade do linho e a pureza da pedra. A natureza e o conforto no auge da perfeição.
+      </p>
+      
+      <div class="pt-4">
+        <a 
+          href="#produtos" 
+          class={buttonVariants({ size: "lg", className: "bg-primary text-primary-foreground text-lg py-6 px-10 hover:bg-primary/90 font-medium" })}
+        >
+          Ver Produtos Destacados
+        </a>
+      </div>
+      <p class="text-sm text-muted-foreground mt-4">
+        Compra 100% segura. Enviamos para todo Brasil (itens não perecíveis). Cortes sujeitos à disponibilidade por região.
+      </p>
+    </div>
+  </div>
+</section>

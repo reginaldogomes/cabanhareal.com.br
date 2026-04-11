@@ -1,0 +1,59 @@
+---
+import { MapPin, Phone } from "lucide-react";
+---
+
+<footer class="bg-background text-foreground border-t border-border/50 py-12 pb-6">
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+      <!-- Brand -->
+      <div class="space-y-4">
+        <h3 class="text-2xl font-bold font-serif italic text-primary">Cabanha Real</h3>
+        <p class="text-muted-foreground font-light leading-relaxed">
+          Sua fonte de carnes de cordeiro premium e decorações artesanais para um lar aconchegante.
+        </p>
+      </div>
+
+      <!-- Links -->
+      <div class="space-y-4">
+        <h4 class="font-semibold text-lg">Institucional</h4>
+        <ul class="space-y-2 text-muted-foreground font-light">
+          <li><a href="#sobre" class="hover:text-primary transition-colors">Quem Somos</a></li>
+          <li><a href="#produtos" class="hover:text-primary transition-colors">Produtos</a></li>
+          <li><a href="#" class="hover:text-primary transition-colors">Termos e Condições</a></li>
+          <li><a href="#" class="hover:text-primary transition-colors">Política de Privacidade</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="space-y-4">
+        <h4 class="font-semibold text-lg">Contato</h4>
+        <ul class="space-y-4 text-muted-foreground font-light">
+          <li class="flex items-start gap-3">
+            <Phone class="w-5 h-5 text-primary mt-1" />
+            <span>32 9 9920 4504</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <MapPin class="w-5 h-5 text-primary mt-1" />
+            <span>ZONA RURAL – Parque dos ipês, Cel. Xavier Chaves –<br/>MG, 36330-000</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Social -->
+      <div class="space-y-4">
+        <h4 class="font-semibold text-lg">Redes Sociais</h4>
+        <p class="text-muted-foreground font-light mb-4">Acompanhe nossa rotina e os bastidores no pasto.</p>
+        <div class="flex gap-4">
+          <a href="#" aria-label="Instagram" class="bg-secondary p-3 rounded-full text-foreground hover:bg-primary hover:text-primary-foreground transition-all flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="text-center pt-8 border-t border-border/30 text-sm text-muted-foreground">
+      <p>&copy; {new Date().getFullYear()} Cabanha Real. Todos os direitos reservados.</p>
+    </div>
+  </div>
+</footer>

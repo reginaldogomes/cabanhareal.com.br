@@ -8,6 +8,7 @@
     "dist"
   ],
   "compilerOptions": {
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
     "jsx": "react-jsx",
     "jsxImportSource": "react",
     "baseUrl": ".",

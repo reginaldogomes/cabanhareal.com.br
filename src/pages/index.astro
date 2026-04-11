@@ -1,11 +1,53 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import { Benefits } from '../components/Benefits';
+import { FeaturedProducts } from '../components/FeaturedProducts';
+import { Testimonials } from '../components/Testimonials';
+import About from '../components/About.astro';
+import FinalCTA from '../components/FinalCTA.astro';
+import Footer from '../components/Footer.astro';
+import { Menu } from 'lucide-react';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+export const prerender = true;
 ---
 
 <Layout>
-	<Welcome />
+  <!-- Header / Nav (Simples para a Landing Page) -->
+  <header class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
+    <div class="container mx-auto px-4 h-20 flex items-center justify-between">
+            <a href="/" class="block">
+        <img src="/src/assets/cabanha_real.png" alt="Logo Cabanha Real" class="h-12 w-auto" />
+      </a>
+      
+      <nav class="hidden md:flex gap-8 items-center text-sm font-medium text-muted-foreground">
+        <a href="#produtos" class="hover:text-primary transition-colors">Produtos</a>
+        <a href="#sobre" class="hover:text-primary transition-colors">Sobre Nós</a>
+        <a href="#depoimentos" class="hover:text-primary transition-colors">Depoimentos</a>
+        <a href="#contato" class="bg-primary text-primary-foreground px-5 py-2.5 rounded-md hover:bg-primary/90 transition-all">Fale Conosco</a>
+      </nav>
+
+      <button class="md:hidden text-foreground">
+        <Menu class="w-6 h-6" />
+      </button>
+    </div>
+  </header>
+
+  <main class="pt-20"> <!-- pt-20 to offset fixed header -->
+    <Hero />
+    <Benefits client:visible />
+    <FeaturedProducts client:visible />
+    
+    <div id="depoimentos">
+      <Testimonials client:visible />
+    </div>
+
+    <About />
+    
+    <div id="contato">
+      <FinalCTA />
+    </div>
+  </main>
+
+  <Footer />
 </Layout>

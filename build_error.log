@@ -1,0 +1,38 @@
+
+> cabanhareal.com.br@0.0.1 build
+> astro build
+
+15:27:47 [types] Generated 31ms
+15:27:47 [build] output: "static"
+15:27:47 [build] mode: "static"
+15:27:47 [build] directory: /home/reginaldogomes/Projects/2026/cabanhareal.com.br/dist/
+15:27:47 [build] Collecting build info...
+15:27:47 [build] ✓ Completed in 43ms.
+15:27:47 [build] Building static entrypoints...
+15:27:47 [vite] ✓ built in 754ms
+15:27:49 [vite] ✓ built in 1.62s
+15:27:49 [build] Rearranging server assets...
+
+ generating static routes 
+15:27:49   ├─ /index.html15:27:49 [ERROR] file:///home/reginaldogomes/Projects/2026/cabanhareal.com.br/dist/.prerender/chunks/index_r-HzzRLN.mjs:9
+import { Crown, Leaf, ShieldCheck, Truck, MoveRight, Star, Phone, MapPin, Instagram, Menu } from 'lucide-react';
+                                                                          ^^^^^^^^^
+SyntaxError: The requested module 'lucide-react' does not provide an export named 'Instagram'
+    at ModuleJob._instantiate (node:internal/modules/esm/module_job:226:21)
+    at async ModuleJob.run (node:internal/modules/esm/module_job:335:5)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:665:26)
+    at async BuildPipeline.getModuleForRoute (file:///home/reginaldogomes/Projects/2026/cabanhareal.com.br/dist/.prerender/chunks/prerender_T0NIOL9K.mjs:9823:14)
+    at async BuildPipeline.getComponentByRoute (file:///home/reginaldogomes/Projects/2026/cabanhareal.com.br/dist/.prerender/chunks/prerender_T0NIOL9K.mjs:9795:20)
+    at async BuildApp.render (file:///home/reginaldogomes/Projects/2026/cabanhareal.com.br/dist/.prerender/chunks/prerender_T0NIOL9K.mjs:9059:33)
+    at async renderPath (file:///home/reginaldogomes/Projects/2026/cabanhareal.com.br/node_modules/astro/dist/core/build/generate.js:251:16)
+    at async generatePathWithPrerenderer (file:///home/reginaldogomes/Projects/2026/cabanhareal.com.br/node_modules/astro/dist/core/build/generate.js:310:18)
+    at async generatePages (file:///home/reginaldogomes/Projects/2026/cabanhareal.com.br/node_modules/astro/dist/core/build/generate.js:133:9)
+    at async BasicMinimalPluginContext.handler (file:///home/reginaldogomes/Projects/2026/cabanhareal.com.br/node_modules/astro/dist/core/build/static-build.js:127:11)
+15:27:49 [ERROR] [build] Caught error rendering /: SyntaxError: The requested module 'lucide-react' does not provide an export named 'Instagram'
+The requested module 'lucide-react' does not provide an export named 'Instagram'
+  Stack trace:
+    at ModuleJob._instantiate (node:internal/modules/esm/module_job:226:21)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:665:26)
+    at async BuildPipeline.getComponentByRoute (file:///home/reginaldogomes/Projects/2026/cabanhareal.com.br/dist/.prerender/chunks/prerender_T0NIOL9K.mjs:9795:20)
+    at async renderPath (file:///home/reginaldogomes/Projects/2026/cabanhareal.com.br/node_modules/astro/dist/core/build/generate.js:251:16)
+    at async generatePages (file:///home/reginaldogomes/Projects/2026/cabanhareal.com.br/node_modules/astro/dist/core/build/generate.js:133:9)
