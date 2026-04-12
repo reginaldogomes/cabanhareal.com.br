@@ -3,11 +3,12 @@ import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import { Benefits } from '../components/Benefits';
 import { FeaturedProducts } from '../components/FeaturedProducts';
-import { Testimonials } from '../components/Testimonials';
+
 import About from '../components/About.astro';
 import FinalCTA from '../components/FinalCTA.astro';
 import Footer from '../components/Footer.astro';
-import { Menu } from 'lucide-react';
+import { Menu, MessageCircle } from 'lucide-react';
+import Lambs from '../components/Lambs.astro';
 
 export const prerender = true;
 ---
@@ -23,12 +24,14 @@ export const prerender = true;
       <nav class="hidden md:flex gap-8 items-center text-sm font-medium text-muted-foreground">
         <a href="#produtos" class="hover:text-primary transition-colors">Produtos</a>
         <a href="#sobre" class="hover:text-primary transition-colors">Sobre Nós</a>
-        <a href="#depoimentos" class="hover:text-primary transition-colors">Depoimentos</a>
-        <a href="#contato" class="bg-primary text-primary-foreground px-5 py-2.5 rounded-md hover:bg-primary/90 transition-all">Fale Conosco</a>
+        <a href="https://wa.me/5532999204504" target="_blank" rel="noopener noreferrer" class="bg-primary text-primary-foreground px-5 py-2.5 rounded-md hover:bg-primary/90 transition-all flex items-center gap-2">
+          <MessageCircle className="w-4 h-4" />
+          Atendimento
+        </a>
       </nav>
 
       <button class="md:hidden text-foreground">
-        <Menu class="w-6 h-6" />
+        <Menu className="w-6 h-6" />
       </button>
     </div>
   </header>
@@ -38,15 +41,13 @@ export const prerender = true;
     <Benefits client:visible />
     <FeaturedProducts client:visible />
     
-    <div id="depoimentos">
-      <Testimonials client:visible />
-    </div>
 
     <About />
     
     <div id="contato">
       <FinalCTA />
     </div>
+    <Lambs />
   </main>
 
   <Footer />

@@ -1,0 +1,37 @@
+---
+import { MessageCircle } from "lucide-react";
+const whatsappLink = "https://wa.me/5532999204504";
+---
+
+<a href={whatsappLink} target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Fale Conosco pelo WhatsApp">
+  <MessageCircle className="whatsapp-icon" />
+</a>
+
+<style>
+  .whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25D366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out;
+  }
+  .whatsapp-float:hover {
+    transform: scale(1.1);
+  }
+
+  .whatsapp-icon {
+    width: 32px;
+    height: 32px;
+  }
+</style>

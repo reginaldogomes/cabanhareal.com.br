@@ -7,8 +7,8 @@ export function FeaturedProducts() {
   const products = [
     {
       id: 1,
-      image: "https://images.unsplash.com/photo-1603048297172-c92544798d5e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      title: "Cortes Premium de Cordeiro",
+      image: "/src/assets/produtos/costela.webp",
+      title: "Costela",
       description: "Suculência e sabor inigualável direto da Cabanha Real, para sua família.",
       price: "Sob Consulta",
       tag: "Mais Vendido"
@@ -36,8 +36,8 @@ export function FeaturedProducts() {
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center justify-between gap-4 mb-12 md:flex-row">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground">Seleção Cabanha Real</h2>
-            <p className="text-muted-foreground mt-2 text-lg">Produtos escolhidos a dedo para o seu lar.</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground">Nossos Cortes Nobres</h2>
+            <p className="text-muted-foreground mt-2 text-lg">Transforme suas refeições em momentos inesquecíveis. Oferecemos uma seleção de cortes nobres de cordeiro, perfeitos para os mais variados preparos, do churrasco do fim de semana ao jantar especial.</p>
           </div>
           <Button variant="ghost" className="hidden md:flex gap-2">
             Ver Toda Coleção <MoveRight className="w-4 h-4" />

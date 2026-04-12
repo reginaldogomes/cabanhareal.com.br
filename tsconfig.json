@@ -2,7 +2,7 @@
   "extends": "astro/tsconfigs/strict",
   "include": [
     ".astro/types.d.ts",
-    "**/*"
+    "src/**/*"
   ],
   "exclude": [
     "dist"
@@ -15,9 +15,6 @@
     "paths": {
       "@/*": [
         "src/*"
-      ],
-      "@components/*": [
-        "src/components/*"
       ]
     }
   }
