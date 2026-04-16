@@ -58,9 +58,6 @@ export function FeaturedProducts() {
             <h2 className="text-3xl md:text-4xl font-bold text-foreground">Nossos Cortes Nobres</h2>
             <p className="text-muted-foreground mt-2 text-lg">Transforme suas refeições em momentos inesquecíveis. Oferecemos uma seleção de cortes nobres de cordeiro, perfeitos para os mais variados preparos, do churrasco do fim de semana ao jantar especial.</p>
           </div>
-          <Button variant="ghost" className="hidden md:flex gap-2">
-            Ver Toda Coleção <MoveRight className="w-4 h-4" />
-          </Button>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
