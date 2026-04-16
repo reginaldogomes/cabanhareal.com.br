@@ -1,4 +1,3 @@
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { MoveRight, X, ZoomIn } from "lucide-react";
@@ -18,21 +17,36 @@ export function FeaturedProducts() {
       image: "/src/assets/produtos/costela.webp",
       title: "Costela",
       description: "Um corte macio e suculento, de sabor marcante e sofisticado. Ideal para pratos refinados e ocasiões especiais, trazendo elegância e intensidade únicas aos momentos.",
-      tag: "Mais Vendido"
     },
     {
       id: 2,
-      image: "https://images.unsplash.com/photo-1543857778-c4a1a3e0b2eb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      title: "Mantas de Fibras Naturais",
-      description: "Aconchego para o sofá ou cama, feitas com 100% de lã ovina e linho rústico.",
-      tag: "Novo"
+      image: "/src/assets/produtos/carre.webp",
+      title: "Carré",
+      description: "Um corte nobre e elegante, de maciez incomparável e sabor delicado. Perfeito para preparações refinadas e momentos especiais, unindo tradição e requinte.",
     },
     {
       id: 3,
-      image: "https://images.unsplash.com/photo-1592078615290-033ee584e267?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      title: "Poltrona Rústica Casca de Madeira",
-      description: "Madeira maciça com acabamentos em algodão cru. O refúgio perfeito na sua sala.",
-      tag: "Exclusivo"
+      image: "/src/assets/produtos/pernil.webp",
+      title: "Pernil",
+      description: "Um corte clássico e saboroso, de textura macia e aroma marcante. Ideal para assados e receitas lentas, perfeito para compartilhar em ocasiões especiais.",
+    },
+    {
+      id: 4,
+      image: "/src/assets/produtos/picanha.png",
+      title: "Picanha",
+      description: "Um corte nobre e suculento, com um sabor mais delicado e característico. A picanha de cordeiro é incrivelmente macia e perfeita para ser assada ou grelhada, resultando em uma carne tenra e saborosa.",
+    },
+    {
+      id: 5,
+      image: "/src/assets/produtos/tbone.png",
+      title: "T-Bone",
+      description: "Um corte nobre e imponente, o T-Bone é a escolha perfeita para os amantes de carne. Ele combina dois cortes clássicos em um único osso em formato de “T”: o suculento contrafilé e o tenro filé mignon.",
+    },
+    {
+      id: 6,
+      image: "/src/assets/produtos/pescoco.png",
+      title: "Pescoço",
+      description: "Um corte saboroso e de alta qualidade, a carne do pescoço é muito apreciada por sua suculência e textura macia, resultado de uma cocção longa e lenta.",
     }
   ];
 
@@ -65,9 +79,6 @@ export function FeaturedProducts() {
                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
                       <ZoomIn className="w-8 h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 drop-shadow-lg" />
                     </div>
-                    <Badge className="absolute top-4 right-4 bg-primary text-primary-foreground">
-                      {p.tag}
-                    </Badge>
                   </div>
                 </Dialog.Trigger>
 
@@ -90,7 +101,7 @@ export function FeaturedProducts() {
 
               <CardHeader className="pt-6">
                 <CardTitle className="text-xl font-semibold">{p.title}</CardTitle>
-                <CardDescription className="text-muted-foreground line-clamp-2 mt-2">
+                <CardDescription className="text-muted-foreground mt-2">
                   {p.description}
                 </CardDescription>
               </CardHeader>
