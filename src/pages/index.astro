@@ -9,6 +9,7 @@ import FinalCTA from '../components/FinalCTA.astro';
 import Footer from '../components/Footer.astro';
 import { Menu } from 'lucide-react';
 import Lambs from '../components/Lambs.astro';
+import logoCabanhaReal from '@/assets/cabanha_real.png';
 
 export const prerender = true;
 ---
@@ -22,7 +23,7 @@ export const prerender = true;
   <header class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
     <div class="container mx-auto px-4 h-16 md:h-24 flex items-center justify-between">
       <a href="/" class="block">
-        <img src="/src/assets/cabanha_real.png" alt="Cabanha Real" class="h-10 md:h-16 w-auto" width="160" height="64" decoding="async" />
+        <img src={logoCabanhaReal.src} alt="Cabanha Real" class="h-10 md:h-16 w-auto" width="160" height="64" decoding="async" />
       </a>
       
       <nav class="hidden md:flex gap-8 items-center text-sm font-medium text-muted-foreground">
