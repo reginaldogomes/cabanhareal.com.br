@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import WhatsAppButton from '@components/WhatsAppButton.astro';
+import bgHero from '@/assets/bg_hero.jpg';
 
 interface Props {
   title?: string;
@@ -79,7 +80,7 @@ const jsonLd = {
     <meta name="theme-color" content="#2d6a4f" />
 
     <!-- Preload LCP hero image -->
-    <link rel="preload" as="image" href="/src/assets/bg_hero.jpg" fetchpriority="high" />
+    <link rel="preload" as="image" href={bgHero.src} fetchpriority="high" />
     <!-- DNS prefetch para recursos externos -->
     <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
     <link rel="dns-prefetch" href="https://wa.me" />

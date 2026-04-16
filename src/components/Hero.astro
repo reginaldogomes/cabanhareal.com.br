@@ -1,12 +1,13 @@
 ---
 import { buttonVariants } from "@/components/ui/button";
+import bgHero from "@/assets/bg_hero.jpg";
 ---
 
 <section class="relative h-[80vh] min-h-[600px] w-full flex items-center justify-center overflow-hidden">
   <!-- Imagem de Fundo (Placeholder Lifestyle/Aconchego) -->
   <div class="absolute inset-0 z-0">
     <img
-      src="/src/assets/bg_hero.jpg"
+      src={bgHero.src}
       alt="Cabanha Real - Cordeiro no pasto"
       class="w-full h-full object-cover object-center"
       fetchpriority="high"
