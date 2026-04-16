@@ -1,6 +1,5 @@
-import { Button } from "@/components/ui/button";
 import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { MoveRight, X, ZoomIn } from "lucide-react";
+import { X, ZoomIn } from "lucide-react";
 import { Dialog } from "radix-ui";
 import costelaImage from "@/assets/produtos/costela.webp";
 import carreImage from "@/assets/produtos/carre.webp";
@@ -123,12 +122,6 @@ export function FeaturedProducts() {
               </CardFooter>
             </Card>
           ))}
-        </div>
-        
-        <div className="mt-8 flex justify-center md:hidden">
-          <Button variant="outline" className="w-full sm:w-auto">
-            Ver Toda Coleção <MoveRight className="w-4 h-4 ml-2" />
-          </Button>
         </div>
       </div>
     </section>
