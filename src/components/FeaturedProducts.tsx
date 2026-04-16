@@ -2,6 +2,12 @@ import { Button } from "@/components/ui/button";
 import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { MoveRight, X, ZoomIn } from "lucide-react";
 import { Dialog } from "radix-ui";
+import costelaImage from "@/assets/produtos/costela.webp";
+import carreImage from "@/assets/produtos/carre.webp";
+import pernilImage from "@/assets/produtos/pernil.webp";
+import picanhaImage from "@/assets/produtos/picanha.png";
+import tBoneImage from "@/assets/produtos/tbone.png";
+import pescocoImage from "@/assets/produtos/pescoco.png";
 
 const WHATSAPP_NUMBER = "5532999204504";
 
@@ -14,37 +20,37 @@ export function FeaturedProducts() {
   const products = [
     {
       id: 1,
-      image: "/src/assets/produtos/costela.webp",
+      image: costelaImage.src,
       title: "Costela",
       description: "Um corte macio e suculento, de sabor marcante e sofisticado. Ideal para pratos refinados e ocasiões especiais, trazendo elegância e intensidade únicas aos momentos.",
     },
     {
       id: 2,
-      image: "/src/assets/produtos/carre.webp",
+      image: carreImage.src,
       title: "Carré",
       description: "Um corte nobre e elegante, de maciez incomparável e sabor delicado. Perfeito para preparações refinadas e momentos especiais, unindo tradição e requinte.",
     },
     {
       id: 3,
-      image: "/src/assets/produtos/pernil.webp",
+      image: pernilImage.src,
       title: "Pernil",
       description: "Um corte clássico e saboroso, de textura macia e aroma marcante. Ideal para assados e receitas lentas, perfeito para compartilhar em ocasiões especiais.",
     },
     {
       id: 4,
-      image: "/src/assets/produtos/picanha.png",
+      image: picanhaImage.src,
       title: "Picanha",
       description: "Um corte nobre e suculento, com um sabor mais delicado e característico. A picanha de cordeiro é incrivelmente macia e perfeita para ser assada ou grelhada, resultando em uma carne tenra e saborosa.",
     },
     {
       id: 5,
-      image: "/src/assets/produtos/tbone.png",
+      image: tBoneImage.src,
       title: "T-Bone",
       description: "Um corte nobre e imponente, o T-Bone é a escolha perfeita para os amantes de carne. Ele combina dois cortes clássicos em um único osso em formato de “T”: o suculento contrafilé e o tenro filé mignon.",
     },
     {
       id: 6,
-      image: "/src/assets/produtos/pescoco.png",
+      image: pescocoImage.src,
       title: "Pescoço",
       description: "Um corte saboroso e de alta qualidade, a carne do pescoço é muito apreciada por sua suculência e textura macia, resultado de uma cocção longa e lenta.",
     }
