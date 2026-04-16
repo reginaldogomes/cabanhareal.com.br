@@ -125,5 +125,49 @@ const jsonLd = {
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <slot />
+
+    <div
+      id="cookie-consent-banner"
+      class="fixed inset-x-4 bottom-4 z-50 mx-auto w-auto max-w-xl rounded-xl border border-emerald-200 bg-white/95 p-3 text-sm text-emerald-950 shadow-lg backdrop-blur supports-[backdrop-filter]:bg-white/90"
+      role="dialog"
+      aria-live="polite"
+      aria-label="Consentimento de privacidade e cookies"
+      hidden
+    >
+      <div class="flex items-start gap-3">
+        <p class="leading-relaxed">
+          Usamos cookies para melhorar sua experiência e medir acessos. Ao continuar no site, você concorda com esse uso.
+        </p>
+        <button
+          id="cookie-consent-accept"
+          type="button"
+          class="shrink-0 rounded-md bg-emerald-700 px-3 py-1.5 text-xs font-semibold text-white transition hover:bg-emerald-800 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
+        >
+          Entendi
+        </button>
+      </div>
+    </div>
+
+    <script is:inline>
+      (() => {
+        const storageKey = 'cabanhareal.cookieConsent.v1';
+        const banner = document.getElementById('cookie-consent-banner');
+        const acceptButton = document.getElementById('cookie-consent-accept');
+
+        if (!banner || !acceptButton) return;
+
+        try {
+          const consentValue = window.localStorage.getItem(storageKey);
+          if (consentValue !== 'accepted') banner.hidden = false;
+
+          acceptButton.addEventListener('click', () => {
+            window.localStorage.setItem(storageKey, 'accepted');
+            banner.hidden = true;
+          });
+        } catch {
+          banner.hidden = false;
+        }
+      })();
+    </script>
   </body>
 </html>
