@@ -7,7 +7,7 @@ import { FeaturedProducts } from '../components/FeaturedProducts';
 import About from '../components/About.astro';
 import FinalCTA from '../components/FinalCTA.astro';
 import Footer from '../components/Footer.astro';
-import { Menu } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import Lambs from '../components/Lambs.astro';
 import logoCabanhaReal from '@/assets/cabanha_real.png';
 
@@ -20,7 +20,7 @@ export const prerender = true;
   image="/og-image.jpg"
 >
   <!-- Header / Nav (Simples para a Landing Page) -->
-  <header class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
+  <header id="site-header" class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
     <div class="container mx-auto px-4 h-16 md:h-24 flex items-center justify-between">
       <a href="/" class="block">
         <img src={logoCabanhaReal.src} alt="Cabanha Real" class="h-10 md:h-16 w-auto" width="160" height="64" decoding="async" />
@@ -37,9 +37,35 @@ export const prerender = true;
         </a>
       </nav>
 
-      <button type="button" class="md:hidden text-foreground p-2 -mr-2 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary" aria-label="Abrir menu de navegação">
-        <Menu className="w-6 h-6" aria-hidden="true" />
+      <button
+        id="mobile-menu-toggle"
+        type="button"
+        class="md:hidden text-foreground p-2 -mr-2 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+        aria-label="Abrir menu de navegação"
+        aria-controls="mobile-menu-panel"
+        aria-expanded="false"
+      >
+        <Menu id="mobile-menu-icon-open" className="w-6 h-6" aria-hidden="true" />
+        <X id="mobile-menu-icon-close" className="hidden w-6 h-6" aria-hidden="true" />
       </button>
+    </div>
+
+    <div
+      id="mobile-menu-panel"
+      class="md:hidden overflow-hidden border-t border-border/60 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80 max-h-0 opacity-0 -translate-y-1 pointer-events-none transition-all duration-300 ease-out"
+    >
+      <nav class="container mx-auto px-4 py-4 flex flex-col gap-3 text-sm font-medium text-muted-foreground">
+        <a href="#produtos" class="mobile-menu-link rounded-md px-3 py-2 hover:bg-muted/70 hover:text-primary transition-colors">Produtos</a>
+        <a href="#sobre" class="mobile-menu-link rounded-md px-3 py-2 hover:bg-muted/70 hover:text-primary transition-colors">Sobre Nós</a>
+        <a
+          href="https://wa.me/5532999204504"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="mobile-menu-link inline-flex items-center justify-center gap-2 rounded-md px-4 py-2.5 text-sm font-semibold text-white transition-colors bg-[#25D366] hover:bg-[#1ebe5d] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366]"
+        >
+          Atendimento no WhatsApp
+        </a>
+      </nav>
     </div>
   </header>
 
@@ -57,4 +83,50 @@ export const prerender = true;
   </main>
 
   <Footer />
+
+  <script is:inline>
+    (() => {
+      const toggleButton = document.getElementById('mobile-menu-toggle');
+      const panel = document.getElementById('mobile-menu-panel');
+      const openIcon = document.getElementById('mobile-menu-icon-open');
+      const closeIcon = document.getElementById('mobile-menu-icon-close');
+      const links = panel?.querySelectorAll('.mobile-menu-link');
+
+      if (!toggleButton || !panel || !openIcon || !closeIcon) return;
+
+      const setOpen = (isOpen) => {
+        toggleButton.setAttribute('aria-expanded', String(isOpen));
+        panel.classList.toggle('max-h-0', !isOpen);
+        panel.classList.toggle('opacity-0', !isOpen);
+        panel.classList.toggle('-translate-y-1', !isOpen);
+        panel.classList.toggle('pointer-events-none', !isOpen);
+        panel.classList.toggle('max-h-80', isOpen);
+        panel.classList.toggle('opacity-100', isOpen);
+        panel.classList.toggle('translate-y-0', isOpen);
+        panel.classList.toggle('pointer-events-auto', isOpen);
+        openIcon.classList.toggle('hidden', isOpen);
+        closeIcon.classList.toggle('hidden', !isOpen);
+      };
+
+      let open = false;
+      toggleButton.addEventListener('click', () => {
+        open = !open;
+        setOpen(open);
+      });
+
+      links?.forEach((link) => {
+        link.addEventListener('click', () => {
+          open = false;
+          setOpen(false);
+        });
+      });
+
+      window.addEventListener('resize', () => {
+        if (window.innerWidth >= 768) {
+          open = false;
+          setOpen(false);
+        }
+      });
+    })();
+  </script>
 </Layout>
