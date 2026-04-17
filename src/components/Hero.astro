@@ -28,7 +28,14 @@ import bgHero from "@/assets/bg_hero.jpg";
         <a href="#produtos" class={buttonVariants({ size: "lg", className: "bg-primary text-primary-foreground hover:bg-primary/90 text-md font-medium" })}>
           Nossos Cortes
         </a>
-        <a href="#sobre" class={buttonVariants({ variant: "outline", size: "lg", className: "text-white border-white hover:bg-white hover:text-black text-md font-medium" })}>
+        <a
+          href="#sobre"
+          class={buttonVariants({
+            variant: "outline",
+            size: "lg",
+            className: "text-white border-white/90 bg-black/30 backdrop-blur-sm hover:bg-white hover:text-black text-md font-medium",
+          })}
+        >
           Nossa História
         </a>
       </div>
