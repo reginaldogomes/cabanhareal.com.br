@@ -5,22 +5,22 @@ export function Benefits() {
     {
       icon: <Crown className="w-10 h-10 text-primary mb-4" />,
       title: "Qualidade Premium",
-      description: "Excelência e rigor técnico do pasto à sua mesa."
+      description: "Cordeiros selecionados com manejo cuidadoso e excelência do pasto à sua mesa."
     },
     {
       icon: <Leaf className="w-10 h-10 text-primary mb-4" />,
       title: "Origem Garantida",
-      description: "Criação de ovelhas livre de estresse com práticas sustentáveis."
+      description: "Cordeiros criados com bem-estar animal, práticas sustentáveis e rastreabilidade."
     },
     {
       icon: <ShieldCheck className="w-10 h-10 text-primary mb-4" />,
       title: "Compra Segura",
-      description: "Checkout rápido, seguro e garantia total Cabanha Real."
+      description: "Atendimento transparente, pedido seguro e suporte direto da Cabanha Real."
     },
     {
       icon: <Truck className="w-10 h-10 text-primary mb-4" />,
       title: "Entregas Rápidas",
-      description: "Logística especializada para manter o frescor impecável."
+      description: "Logística ágil para preservar frescor, qualidade e sabor até você."
     }
   ];
 
